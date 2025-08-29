@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../schemas/library.json",
+  "name": "tweakcn",
+  "description": "A visual no-code theme editor for shadcn/ui components and Tailwind CSS",
+  "author": "tweakcn Team",
+  "repository": "https://github.com/jnsahaj/tweakcn",
+  "homepage": "https://tweakcn.com/",
+  "registryUrl": "https://tweakcn.com/r",
+  "installCommand": "npx shadcn@latest add",
+  "tags": ["tailwind", "react", "shadcn", "theme-editor"],
+  "category": "libraries",
+  "status": "production",
+  "license": "Apache-2.0",
+  "shadcnCompatible": true,
+  "features": [
+    "Visual theme editor for shadcn/ui",
+    "Tailwind CSS v4 support",
+    "Exportable presets",
+    "Advanced customization options"
+  ],
+  "version": "1.0.0",
+  "lastUpdated": "2025-08-29"
+}
