@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/library.json",
   "name": "FancyComponents",
   "description": "Growing library of ready-to-use React components",
   "author": "FancyComponents Team",

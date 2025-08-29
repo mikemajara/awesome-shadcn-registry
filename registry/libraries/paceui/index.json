@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/library.json",
   "name": "PaceUI",
   "description": "Animated components and design blocks with built-in interactivity",
   "author": "PaceUI Team",

@@ -4,14 +4,33 @@ const fs = require('fs');
 const path = require('path');
 
 const REGISTRY_DIR = path.join(__dirname, '../registry');
+const SCHEMA_DIR = path.join(__dirname, '../schemas');
 const REQUIRED_FIELDS = ['name', 'description', 'author', 'category', 'version', 'shadcnCompatible'];
 const LIBRARY_REQUIRED_FIELDS = ['registryUrl', 'installCommand'];
 const REGISTRY_REQUIRED_FIELDS = ['registryUrl', 'installCommand'];
+
+function validateSchemaReference(entry, filePath) {
+  if (!entry.$schema) {
+    console.warn(`⚠️  ${filePath}: Missing $schema reference. Add "$schema": "../../../schemas/library.json"`);
+    return true; // Warning, not error
+  }
+  
+  const expectedSchema = '../../../schemas/library.json';
+  if (entry.$schema !== expectedSchema) {
+    console.warn(`⚠️  ${filePath}: Incorrect schema reference. Expected: ${expectedSchema}`);
+    return true; // Warning, not error
+  }
+  
+  return true;
+}
 
 function validateRegistryEntry(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const entry = JSON.parse(content);
+    
+    // Validate schema reference
+    validateSchemaReference(entry, filePath);
     
     // Check basic required fields
     const missingFields = REQUIRED_FIELDS.filter(field => !entry[field]);
@@ -21,7 +40,7 @@ function validateRegistryEntry(filePath) {
     }
     
     // Validate category
-    const validCategories = ['libraries', 'registries', 'tools'];
+    const validCategories = ['libraries'];
     if (!validCategories.includes(entry.category)) {
       console.error(`❌ ${filePath}: Invalid category '${entry.category}'. Must be one of: ${validCategories.join(', ')}`);
       return false;
@@ -49,13 +68,6 @@ function validateRegistryEntry(filePath) {
       }
     }
     
-    if (entry.category === 'registries') {
-      const missingRegistryFields = REGISTRY_REQUIRED_FIELDS.filter(field => !entry[field]);
-      if (missingRegistryFields.length > 0) {
-        console.error(`❌ ${filePath}: Missing required registry fields: ${missingRegistryFields.join(', ')}`);
-        return false;
-      }
-    }
     
     // Validate URLs if present
     const urlFields = ['homepage', 'repository', 'registryUrl'];
@@ -101,7 +113,7 @@ function validateAllEntries() {
   console.log('🔍 Validating shadcn registry entries...\n');
   
   let isValid = true;
-  const categories = ['libraries', 'registries', 'tools'];
+  const categories = ['libraries'];
   let totalEntries = 0;
   
   categories.forEach(category => {

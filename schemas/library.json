@@ -1,0 +1,170 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mikemajara/awesome-shadcn-registry/main/schemas/library.json",
+  "title": "Shadcn Registry Library",
+  "description": "Schema for shadcn-compatible component library entries",
+  "type": "object",
+  "required": [
+    "name",
+    "description",
+    "author",
+    "category",
+    "status",
+    "license",
+    "shadcnCompatible",
+    "registryUrl",
+    "installCommand",
+    "version",
+    "lastUpdated"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Local schema reference for editor tooling"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the library",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the library",
+      "minLength": 10,
+      "maxLength": 500
+    },
+    "author": {
+      "type": "string",
+      "description": "Author or organization name",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "repository": {
+      "type": "string",
+      "description": "GitHub repository URL",
+      "format": "uri",
+      "pattern": "^https://github\\.com/[^/]+/[^/]+/?$"
+    },
+    "homepage": {
+      "type": "string",
+      "description": "Official website or documentation URL",
+      "format": "uri"
+    },
+    "registryUrl": {
+      "type": "string",
+      "description": "Registry endpoint URL for component installation",
+      "format": "uri"
+    },
+    "installCommand": {
+      "type": "string",
+      "description": "Base command for installing components",
+      "enum": ["npx shadcn@latest add"],
+      "default": "npx shadcn@latest add"
+    },
+    "tags": {
+      "type": "array",
+      "description": "Tags describing the library features and technologies",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 30
+      },
+      "uniqueItems": true,
+      "maxItems": 10
+    },
+    "category": {
+      "type": "string",
+      "description": "Library category",
+      "enum": ["libraries"],
+      "default": "libraries"
+    },
+    "status": {
+      "type": "string",
+      "description": "Development and stability status",
+      "enum": ["production", "beta", "alpha"],
+      "default": "production"
+    },
+    "license": {
+      "type": "string",
+      "description": "Software license",
+      "examples": ["MIT", "Apache-2.0", "GPL-3.0", "BSD-3-Clause"]
+    },
+    "shadcnCompatible": {
+      "type": "boolean",
+      "description": "Must be true for inclusion in registry",
+      "const": true
+    },
+    "componentCount": {
+      "type": "string",
+      "description": "Approximate number of components (e.g., '50+', '100-200')",
+      "pattern": "^(\\d+\\+?|\\d+-\\d+)$",
+      "examples": ["50+", "100-200", "25"]
+    },
+    "categories": {
+      "type": "array",
+      "description": "Component categories available in the library",
+      "items": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 50
+      },
+      "uniqueItems": true
+    },
+    "features": {
+      "type": "array",
+      "description": "Key features and capabilities",
+      "items": {
+        "type": "string",
+        "minLength": 5,
+        "maxLength": 100
+      },
+      "maxItems": 10
+    },
+    "supportedNamespaces": {
+      "type": "array",
+      "description": "Supported namespaces for component installation",
+      "items": {
+        "type": "string",
+        "pattern": "^@[a-z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "version": {
+      "type": "string",
+      "description": "Current version (semantic versioning)",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(-[a-zA-Z0-9.-]+)?$"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "description": "Last update date (YYYY-MM-DD format)",
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "name": "OriginUI",
+      "description": "Open-source collection of copy-and-paste components built with Tailwind CSS and React",
+      "author": "OriginUI Team",
+      "repository": "https://github.com/Origin-UI/originui",
+      "homepage": "https://originui.com/",
+      "registryUrl": "https://originui.com/r",
+      "installCommand": "npx shadcn@latest add",
+      "tags": ["tailwind", "react", "copy-paste", "light-dark-mode"],
+      "category": "libraries",
+      "status": "production",
+      "license": "MIT",
+      "shadcnCompatible": true,
+      "componentCount": "500+",
+      "features": [
+        "25+ component categories",
+        "Light and dark mode support",
+        "Copy-paste ready"
+      ],
+      "version": "1.0.0",
+      "lastUpdated": "2025-01-15"
+    }
+  ]
+}

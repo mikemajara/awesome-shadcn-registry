@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/library.json",
   "name": "OriginUI",
   "description": "Open-source collection of copy-and-paste components built with Tailwind CSS and React",
   "author": "OriginUI Team",

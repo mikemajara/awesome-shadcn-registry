@@ -33,27 +33,19 @@ npx shadcn@latest add <component-name>
 
 ## Component Libraries
 
-Libraries that provide shadcn-compatible components with their own registries:
+<!-- IMPORT:registry/libraries/README.md -->
+Libraries that implement the shadcn/ui registry format, allowing installation via `npx shadcn@latest add <component>`.
 
 ### Production Ready
 
-<!-- Add production-ready libraries here -->
+- **BundUI** [🔗](https://bundui.io/) [📦](https://github.com/bundui/components) - TypeScript-compatible component library that supports shadcn/ui
+- **FancyComponents** [🔗](https://www.fancycomponents.dev/) - Growing library of ready-to-use React components
+- **OriginUI** [🔗](https://originui.com/) [📦](https://github.com/Origin-UI/originui) - Open-source collection of copy-and-paste components built with Tailwind CSS and React (500+ components)
 
 ### Beta/Experimental
 
-<!-- Add beta/experimental libraries here -->
-
-## Third-Party Registries
-
-Custom registries that extend or enhance the shadcn ecosystem:
-
-<!-- Add third-party registries here -->
-
-## Development Tools
-
-Tools for building and maintaining shadcn-compatible registries:
-
-<!-- Add development tools here -->
+- **PaceUI** [🔗](https://paceui.com/) [📦](https://github.com/paceui/paceui) - Animated components and design blocks with built-in interactivity
+<!-- END IMPORT -->
 
 ## How to Use
 

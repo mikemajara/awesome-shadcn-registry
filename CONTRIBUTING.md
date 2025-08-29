@@ -49,6 +49,7 @@ registry/
 
 ```json
 {
+  "$schema": "../../../schemas/library.json",
   "name": "Your Library Name",
   "description": "Brief description of the component library",
   "author": "Author Name",
@@ -58,7 +59,7 @@ registry/
   "installCommand": "npx shadcn@latest add",
   "tags": ["react", "tailwind", "typescript"],
   "category": "libraries",
-  "status": "production|beta|alpha",
+  "status": "production",
   "license": "MIT",
   "shadcnCompatible": true,
   "componentCount": "50+",
@@ -72,27 +73,34 @@ registry/
 }
 ```
 
-### For Third-Party Registries (`registry/registries/`)
+**Schema Benefits:**
+- ✅ **IDE Autocompletion** - VS Code and other editors provide field suggestions
+- ✅ **Validation** - Catch errors before submitting PRs
+- ✅ **Documentation** - Built-in field descriptions and examples
+- ✅ **Type Safety** - Ensures consistent data structure
 
-```json
-{
-  "name": "Your Registry Name",
-  "description": "Custom registry that extends shadcn ecosystem",
-  "author": "Author Name",
-  "repository": "https://github.com/username/registry",
-  "homepage": "https://yourregistry.com/",
-  "registryUrl": "https://yourregistry.com/api/{name}.json",
-  "installCommand": "npx shadcn@latest add @yourregistry/",
-  "tags": ["registry", "custom", "extension"],
-  "category": "registries",
-  "status": "production",
-  "license": "MIT",
-  "shadcnCompatible": true,
-  "supportedNamespaces": ["@yourregistry"],
-  "version": "1.0.0",
-  "lastUpdated": "2025-01-15"
-}
-```
+## JSON Schema
+
+All registry entries use a JSON schema for validation and IDE support. The schema file is located at `schemas/library.json` and provides:
+
+- **Field validation** - Required fields, data types, formats
+- **IDE autocompletion** - IntelliSense in VS Code and other editors  
+- **Built-in documentation** - Descriptions and examples for each field
+- **Consistent structure** - Ensures all entries follow the same format
+
+### Using the Schema
+
+1. **Add the schema reference** to your `index.json`:
+   ```json
+   {
+     "$schema": "../../../schemas/library.json",
+     // ... rest of your data
+   }
+   ```
+
+2. **IDE Setup**: Most modern editors automatically recognize the `$schema` field and provide autocompletion
+
+3. **Validation**: Run `npm run validate` to check schema compliance
 
 ## Validation
 

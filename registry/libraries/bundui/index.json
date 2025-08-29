@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../schemas/library.json",
   "name": "BundUI",
   "description": "TypeScript-compatible component library that supports shadcn/ui",
   "author": "BundUI Team",
