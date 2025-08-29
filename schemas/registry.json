@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/mikemajara/awesome-shadcn-registry/main/schemas/registry.json",
+  "title": "Awesome shadcn Registry",
+  "description": "Root registry file containing an array of libraries",
+  "type": "object",
+  "required": ["libraries"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Local schema reference for editor tooling"
+    },
+    "libraries": {
+      "type": "array",
+      "description": "List of shadcn-compatible libraries",
+      "items": {
+        "$ref": "./library.json"
+      }
+    }
+  },
+  "additionalProperties": false
+}

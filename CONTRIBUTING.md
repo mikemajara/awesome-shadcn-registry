@@ -5,6 +5,7 @@ Thank you for your interest in contributing! This guide will help you add shadcn
 ## What We're Looking For
 
 This registry focuses specifically on:
+
 - **Component Libraries** that implement the shadcn/ui registry specification
 - **Third-Party Registries** that extend the shadcn ecosystem
 - **Development Tools** for building shadcn-compatible registries
@@ -23,57 +24,54 @@ Your submission must meet ALL of these criteria:
 
 1. Fork this repository
 2. Create a new branch for your contribution
-3. Add your library to the appropriate section in README.md
-4. Create a registry entry in the `registry/` directory
+3. Add your library to the appropriate section in README.md (optional)
+4. Add your library object to `registry.json` under the `libraries` array
 5. Test your entry using our validation script
 6. Submit a pull request
 
 ## Registry Structure
 
 ```
-registry/
-├── libraries/        # Component libraries with shadcn registries
-│   └── your-library/
-│       └── index.json
-├── registries/       # Third-party registries  
-│   └── your-registry/
-│       └── index.json
-└── tools/           # Development tools for registries
-    └── your-tool/
-        └── index.json
+registry.json         # Root registry file (has $schema and libraries array)
+registry/             # Generated docs live here (libraries/README.md)
 ```
 
 ## Registry Entry Format
 
-### For Component Libraries (`registry/libraries/`)
+### For Component Libraries (inside `registry.json`)
 
 ```json
 {
-  "$schema": "../../../schemas/library.json",
-  "name": "Your Library Name",
-  "description": "Brief description of the component library",
-  "author": "Author Name",
-  "repository": "https://github.com/username/repo",
-  "homepage": "https://yourlibrary.com/",
-  "registryUrl": "https://yourlibrary.com/r",
-  "installCommand": "npx shadcn@latest add",
-  "tags": ["react", "tailwind", "typescript"],
-  "category": "libraries",
-  "status": "production",
-  "license": "MIT",
-  "shadcnCompatible": true,
-  "componentCount": "50+",
-  "features": [
-    "TypeScript support",
-    "Tailwind CSS integration",
-    "Dark mode support"
-  ],
-  "version": "1.0.0",
-  "lastUpdated": "2025-01-15"
+  "$schema": "./schemas/registry.json",
+  "libraries": [
+    {
+      "name": "Your Library Name",
+      "description": "Brief description of the component library",
+      "author": "Author Name",
+      "repository": "https://github.com/username/repo",
+      "homepage": "https://yourlibrary.com/",
+      "registryUrl": "https://yourlibrary.com/r",
+      "installCommand": "npx shadcn@latest add",
+      "tags": ["react", "tailwind", "typescript"],
+      "category": "libraries",
+      "status": "production",
+      "license": "MIT",
+      "shadcnCompatible": true,
+      "componentCount": "50+",
+      "features": [
+        "TypeScript support",
+        "Tailwind CSS integration",
+        "Dark mode support"
+      ],
+      "version": "1.0.0",
+      "lastUpdated": "2025-01-15"
+    }
+  ]
 }
 ```
 
 **Schema Benefits:**
+
 - ✅ **IDE Autocompletion** - VS Code and other editors provide field suggestions
 - ✅ **Validation** - Catch errors before submitting PRs
 - ✅ **Documentation** - Built-in field descriptions and examples
@@ -84,22 +82,14 @@ registry/
 All registry entries use a JSON schema for validation and IDE support. The schema file is located at `schemas/library.json` and provides:
 
 - **Field validation** - Required fields, data types, formats
-- **IDE autocompletion** - IntelliSense in VS Code and other editors  
+- **IDE autocompletion** - IntelliSense in VS Code and other editors
 - **Built-in documentation** - Descriptions and examples for each field
 - **Consistent structure** - Ensures all entries follow the same format
 
 ### Using the Schema
 
-1. **Add the schema reference** to your `index.json`:
-   ```json
-   {
-     "$schema": "../../../schemas/library.json",
-     // ... rest of your data
-   }
-   ```
-
-2. **IDE Setup**: Most modern editors automatically recognize the `$schema` field and provide autocompletion
-
+1. Ensure `registry.json` has the top-level `$schema`: `./schemas/registry.json`
+2. **IDE Setup**: Most modern editors automatically recognize the `$schema` and provide autocompletion
 3. **Validation**: Run `npm run validate` to check schema compliance
 
 ## Validation

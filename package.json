@@ -24,10 +24,10 @@
     "lint-staged": "^15.0.0"
   },
   "lint-staged": {
-    "registry/libraries/*/index.json": [
+    "registry.json": [
       "npm run validate",
       "npm run generate-readme",
-      "git add README.md registry/libraries/README.md"
+      "git add README.md"
     ]
   }
 }

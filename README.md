@@ -14,11 +14,8 @@ Libraries that implement the shadcn/ui registry format, allowing installation vi
 - **BundUI** [🔗](https://bundui.io/) [📦](https://github.com/bundui/components) - TypeScript-compatible component library that supports shadcn/ui
 - **FancyComponents** [🔗](https://www.fancycomponents.dev/) - Growing library of ready-to-use React components
 - **OriginUI** [🔗](https://originui.com/) [📦](https://github.com/Origin-UI/originui) - Open-source collection of copy-and-paste components built with Tailwind CSS and React (500+ components)
-- **tweakcn** [🔗](https://tweakcn.com/) [📦](https://github.com/jnsahaj/tweakcn) - A visual no-code theme editor for shadcn/ui components and Tailwind CSS
-
-### Beta/Experimental
-
 - **PaceUI** [🔗](https://paceui.com/) [📦](https://github.com/paceui/paceui) - Animated components and design blocks with built-in interactivity
+- **tweakcn** [🔗](https://tweakcn.com/) [📦](https://github.com/jnsahaj/tweakcn) - A visual no-code theme editor for shadcn/ui components and Tailwind CSS
 <!-- END IMPORT -->
 
 ## How to Use
@@ -59,7 +56,7 @@ Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a p
 **TL;DR**
 
 1. Fork the repo
-2. Add a library to the registry/libraries following the schema
+2. Add a library object to `registry.json` under the `libraries` array
 3. `git commit -m "add: awesome library"
 4. Push and PR
 

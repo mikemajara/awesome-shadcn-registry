@@ -4,19 +4,11 @@ This directory contains JSON schemas for validating registry entries.
 
 ## library.json
 
-Schema for component library entries in `registry/libraries/*/index.json`.
+Schema for a single component library entry.
 
 ### Usage
 
-Add the schema reference to your library's `index.json`:
-
-```json
-{
-  "$schema": "../../../schemas/library.json",
-  "name": "Your Library Name",
-  // ... rest of your entry
-}
-```
+Used by `schemas/registry.json` (see below) to validate each entry in the `libraries` array.
 
 ### Benefits
 
@@ -52,8 +44,29 @@ Add the schema reference to your library's `index.json`:
 ### Validation
 
 Run validation with:
+
 ```bash
 npm run validate
 ```
 
 This checks all registry entries against the schema and reports any errors or warnings.
+
+## registry.json
+
+Wrapper schema for the root `registry.json` file.
+
+### Usage
+
+Add the schema reference at the top of `registry.json`:
+
+```json
+{
+  "$schema": "./schemas/registry.json",
+  "libraries": [{}]
+}
+```
+
+### What it validates
+
+- The file is an object containing a `libraries` array
+- Each array item conforms to `schemas/library.json`
