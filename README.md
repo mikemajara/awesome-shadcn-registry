@@ -11,24 +11,24 @@ Libraries that implement the shadcn/ui registry format, allowing installation vi
 
 ### Production Ready
 
-- **AI Elements** [🔗](https://ai-elements.vercel.app/) [📦](https://github.com/vercel/ai-elements) - A collection of UI components for building AI-powered applications.
-- **BundUI** [🔗](https://bundui.io/) [📦](https://github.com/bundui/components) - TypeScript-compatible component library that supports shadcn/ui
-- **CopilotKit** [🔗](https://www.copilotkit.ai/) [📦](https://github.com/CopilotKit/CopilotKit) - React UI and infrastructure for AI copilots and chatbots.
-- **FancyComponents** [🔗](https://www.fancycomponents.dev/) - Growing library of ready-to-use React components
-- **IntentUI** [📦](https://github.com/irsyadadl/intentui) - Modern React UI components.
-- **Kibo UI** [🔗](https://www.kibo-ui.com/) [📦](https://github.com/haydenbleasel/kibo) - A collection of UI components for building AI-powered applications.
-- **Motion Primitives** [🔗](https://motion-primitives.com/) [📦](https://github.com/ibelick/motion-primitives) - UI kit to create beautiful, animated interfaces quickly. Customizable and open-source.
-- **OriginUI** [🔗](https://originui.com/) [📦](https://github.com/Origin-UI/originui) - Open-source collection of copy-and-paste components built with Tailwind CSS and React (500+ components)
-- **PaceUI** [🔗](https://paceui.com/) [📦](https://github.com/paceui/paceui) - Animated components and design blocks with built-in interactivity
-- **Prompt Kit** [🔗](https://prompt-kit.com/) [📦](https://github.com/ibelick/prompt-kit) - Core building blocks for AI applications. High-quality, accessible, and customizable components for AI interfaces.
-- **ReUI** [📦](https://github.com/keenthemes/reui) - Modern UI components by KeenThemes.
-- **shadcn/ui** [🔗](https://ui.shadcn.com/) [📦](https://github.com/shadcn-ui/ui) - Beautifully-designed, accessible components and a code registry for modern web apps.
-- **Supabase** [🔗](https://supabase.com/ui) [📦](https://github.com/supabase/supabase) - The Postgres development platform for web, mobile, and AI apps.
-- **tweakcn** [🔗](https://tweakcn.com/) [📦](https://github.com/jnsahaj/tweakcn) - A visual no-code theme editor for shadcn/ui components and Tailwind CSS
+- <a href="https://ai-elements.vercel.app/" target="_blank" rel="noopener noreferrer"><strong>AI Elements</strong></a> <a href="https://github.com/vercel/ai-elements" target="_blank" rel="noopener noreferrer">📦</a> - A collection of UI components for building AI-powered applications.
+- <a href="https://bundui.io/" target="_blank" rel="noopener noreferrer"><strong>BundUI</strong></a> <a href="https://github.com/bundui/components" target="_blank" rel="noopener noreferrer">📦</a> - TypeScript-compatible component library that supports shadcn/ui
+- <a href="https://www.copilotkit.ai/" target="_blank" rel="noopener noreferrer"><strong>CopilotKit</strong></a> <a href="https://github.com/CopilotKit/CopilotKit" target="_blank" rel="noopener noreferrer">📦</a> - React UI and infrastructure for AI copilots and chatbots.
+- <a href="https://www.fancycomponents.dev/" target="_blank" rel="noopener noreferrer"><strong>FancyComponents</strong></a> <a href="https://github.com/danielpetho/fancy" target="_blank" rel="noopener noreferrer">📦</a> - Growing library of ready-to-use React components
+- <strong>IntentUI</strong> <a href="https://github.com/irsyadadl/intentui" target="_blank" rel="noopener noreferrer">📦</a> - Modern React UI components.
+- <a href="https://www.kibo-ui.com/" target="_blank" rel="noopener noreferrer"><strong>Kibo UI</strong></a> <a href="https://github.com/haydenbleasel/kibo" target="_blank" rel="noopener noreferrer">📦</a> - A collection of UI components for building AI-powered applications.
+- <a href="https://motion-primitives.com/" target="_blank" rel="noopener noreferrer"><strong>Motion Primitives</strong></a> <a href="https://github.com/ibelick/motion-primitives" target="_blank" rel="noopener noreferrer">📦</a> - UI kit to create beautiful, animated interfaces quickly. Customizable and open-source.
+- <a href="https://originui.com/" target="_blank" rel="noopener noreferrer"><strong>OriginUI</strong></a> <a href="https://github.com/Origin-UI/originui" target="_blank" rel="noopener noreferrer">📦</a> - Open-source collection of copy-and-paste components built with Tailwind CSS and React (500+ components)
+- <a href="https://paceui.com/" target="_blank" rel="noopener noreferrer"><strong>PaceUI</strong></a> <a href="https://github.com/paceui/paceui" target="_blank" rel="noopener noreferrer">📦</a> - Animated components and design blocks with built-in interactivity
+- <a href="https://prompt-kit.com/" target="_blank" rel="noopener noreferrer"><strong>Prompt Kit</strong></a> <a href="https://github.com/ibelick/prompt-kit" target="_blank" rel="noopener noreferrer">📦</a> - Core building blocks for AI applications. High-quality, accessible, and customizable components for AI interfaces.
+- <strong>ReUI</strong> <a href="https://github.com/keenthemes/reui" target="_blank" rel="noopener noreferrer">📦</a> - Modern UI components by KeenThemes.
+- <a href="https://ui.shadcn.com/" target="_blank" rel="noopener noreferrer"><strong>shadcn/ui</strong></a> <a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener noreferrer">📦</a> - Beautifully-designed, accessible components and a code registry for modern web apps.
+- <a href="https://supabase.com/ui" target="_blank" rel="noopener noreferrer"><strong>Supabase</strong></a> <a href="https://github.com/supabase/supabase" target="_blank" rel="noopener noreferrer">📦</a> - The Postgres development platform for web, mobile, and AI apps.
+- <a href="https://tweakcn.com/" target="_blank" rel="noopener noreferrer"><strong>tweakcn</strong></a> <a href="https://github.com/jnsahaj/tweakcn" target="_blank" rel="noopener noreferrer">📦</a> - A visual no-code theme editor for shadcn/ui components and Tailwind CSS
 
 ### Beta/Experimental
 
-- **Agents Kit** [🔗](https://agents-ui.github.io/agents-kit/) [📦](https://github.com/agents-ui/agents-kit) - Ready-made components for your AI agents.
+- <a href="https://agents-ui.github.io/agents-kit/" target="_blank" rel="noopener noreferrer"><strong>Agents Kit</strong></a> <a href="https://github.com/agents-ui/agents-kit" target="_blank" rel="noopener noreferrer">📦</a> - Ready-made components for your AI agents.
 <!-- END IMPORT -->
 
 ## How to Use

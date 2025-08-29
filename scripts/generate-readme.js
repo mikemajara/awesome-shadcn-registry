@@ -50,12 +50,11 @@ function readLibraryEntries() {
 function generateLibraryMarkdown(library) {
   const links = []
 
-  if (library.homepage) {
-    links.push(`[🔗](${library.homepage})`)
-  }
-
+  // Build repository link using HTML anchor to open in a new tab
   if (library.repository) {
-    links.push(`[📦](${library.repository})`)
+    links.push(
+      `<a href="${library.repository}" target="_blank" rel="noopener noreferrer">📦</a>`
+    )
   }
 
   const linkString = links.length > 0 ? ` ${links.join(" ")}` : ""
@@ -63,7 +62,12 @@ function generateLibraryMarkdown(library) {
     ? ` (${library.componentCount} components)`
     : ""
 
-  return `- **${library.name}**${linkString} - ${library.description}${componentCount}`
+  // Make bold name the website link (if homepage exists), otherwise just bold text
+  const nameHtml = library.homepage
+    ? `<a href="${library.homepage}" target="_blank" rel="noopener noreferrer"><strong>${library.name}</strong></a>`
+    : `<strong>${library.name}</strong>`
+
+  return `- ${nameHtml}${linkString} - ${library.description}${componentCount}`
 }
 
 function generateLibrariesReadme(libraries) {

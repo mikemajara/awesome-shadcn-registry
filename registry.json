@@ -27,7 +27,7 @@
       "name": "FancyComponents",
       "description": "Growing library of ready-to-use React components",
       "author": "FancyComponents Team",
-      "repository": "",
+      "repository": "https://github.com/danielpetho/fancy",
       "homepage": "https://www.fancycomponents.dev/",
       "registryUrl": "https://www.fancycomponents.dev/r",
       "installCommand": "npx shadcn@latest add",
