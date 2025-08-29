@@ -4,12 +4,9 @@
   "description": "A curated list of awesome tools and components built with shadcn/ui registry",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
     "validate": "node scripts/validate.js",
-    "generate-readme": "node scripts/generate-readme.js"
+    "generate-readme": "node scripts/generate-readme.js",
+    "prepare": "husky install"
   },
   "keywords": [
     "shadcn",
@@ -22,17 +19,15 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "next": "^14.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "eslint": "^8.0.0",
-    "eslint-config-next": "^14.0.0",
-    "typescript": "^5.0.0"
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.0"
+  },
+  "lint-staged": {
+    "registry/libraries/*/index.json": [
+      "npm run validate",
+      "npm run generate-readme",
+      "git add README.md registry/libraries/README.md"
+    ]
   }
 }
