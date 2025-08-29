@@ -56,6 +56,13 @@ For a library to be included in this list, it must:
 
 Please read the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
 
+**TL;DR**
+
+1. Fork the repo
+2. Add a library to the registry/libraries following the schema
+3. `git commit -m "add: awesome library"
+4. Push and PR
+
 ## License
 
 MIT
