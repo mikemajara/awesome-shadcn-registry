@@ -11,11 +11,24 @@ Libraries that implement the shadcn/ui registry format, allowing installation vi
 
 ### Production Ready
 
+- **AI Elements** [🔗](https://ai-elements.vercel.app/) [📦](https://github.com/vercel/ai-elements) - A collection of UI components for building AI-powered applications.
 - **BundUI** [🔗](https://bundui.io/) [📦](https://github.com/bundui/components) - TypeScript-compatible component library that supports shadcn/ui
+- **CopilotKit** [🔗](https://www.copilotkit.ai/) [📦](https://github.com/CopilotKit/CopilotKit) - React UI and infrastructure for AI copilots and chatbots.
 - **FancyComponents** [🔗](https://www.fancycomponents.dev/) - Growing library of ready-to-use React components
+- **IntentUI** [📦](https://github.com/irsyadadl/intentui) - Modern React UI components.
+- **Kibo UI** [🔗](https://www.kibo-ui.com/) [📦](https://github.com/haydenbleasel/kibo) - A collection of UI components for building AI-powered applications.
+- **Motion Primitives** [🔗](https://motion-primitives.com/) [📦](https://github.com/ibelick/motion-primitives) - UI kit to create beautiful, animated interfaces quickly. Customizable and open-source.
 - **OriginUI** [🔗](https://originui.com/) [📦](https://github.com/Origin-UI/originui) - Open-source collection of copy-and-paste components built with Tailwind CSS and React (500+ components)
 - **PaceUI** [🔗](https://paceui.com/) [📦](https://github.com/paceui/paceui) - Animated components and design blocks with built-in interactivity
+- **Prompt Kit** [🔗](https://prompt-kit.com/) [📦](https://github.com/ibelick/prompt-kit) - Core building blocks for AI applications. High-quality, accessible, and customizable components for AI interfaces.
+- **ReUI** [📦](https://github.com/keenthemes/reui) - Modern UI components by KeenThemes.
+- **shadcn/ui** [🔗](https://ui.shadcn.com/) [📦](https://github.com/shadcn-ui/ui) - Beautifully-designed, accessible components and a code registry for modern web apps.
+- **Supabase** [🔗](https://supabase.com/ui) [📦](https://github.com/supabase/supabase) - The Postgres development platform for web, mobile, and AI apps.
 - **tweakcn** [🔗](https://tweakcn.com/) [📦](https://github.com/jnsahaj/tweakcn) - A visual no-code theme editor for shadcn/ui components and Tailwind CSS
+
+### Beta/Experimental
+
+- **Agents Kit** [🔗](https://agents-ui.github.io/agents-kit/) [📦](https://github.com/agents-ui/agents-kit) - Ready-made components for your AI agents.
 <!-- END IMPORT -->
 
 ## How to Use
