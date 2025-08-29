@@ -1,0 +1,22 @@
+{
+  "name": "PaceUI",
+  "description": "Animated components and design blocks with built-in interactivity",
+  "author": "PaceUI Team",
+  "repository": "https://github.com/paceui/paceui",
+  "homepage": "https://paceui.com/",
+  "registryUrl": "https://paceui.com/r",
+  "installCommand": "npx shadcn@latest add",
+  "tags": ["animations", "interactive", "design-blocks", "shadcn"],
+  "category": "libraries",
+  "status": "beta",
+  "license": "MIT",
+  "shadcnCompatible": true,
+  "features": [
+    "Animated UI components",
+    "Built-in interactivity",
+    "Design blocks",
+    "Reusable UI elements"
+  ],
+  "version": "0.9.0",
+  "lastUpdated": "2025-01-15"
+}

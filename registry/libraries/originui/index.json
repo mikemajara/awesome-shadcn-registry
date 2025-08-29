@@ -1,0 +1,31 @@
+{
+  "name": "OriginUI",
+  "description": "Open-source collection of copy-and-paste components built with Tailwind CSS and React",
+  "author": "OriginUI Team",
+  "repository": "https://github.com/Origin-UI/originui",
+  "homepage": "https://originui.com/",
+  "registryUrl": "https://originui.com/r",
+  "installCommand": "npx shadcn@latest add",
+  "tags": ["tailwind", "react", "copy-paste", "light-dark-mode"],
+  "category": "libraries",
+  "status": "production",
+  "license": "MIT",
+  "shadcnCompatible": true,
+  "componentCount": "500+",
+  "categories": [
+    "buttons", "inputs", "forms", "navigation", "layout", "data-display",
+    "feedback", "overlays", "typography", "media", "charts", "commerce",
+    "social", "gaming", "productivity", "communication", "entertainment",
+    "health", "education", "finance", "travel", "food", "weather",
+    "sports", "news", "misc"
+  ],
+  "features": [
+    "25+ component categories",
+    "Light and dark mode support",
+    "Tailwind CSS styling",
+    "React components",
+    "Copy-paste ready"
+  ],
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-15"
+}
